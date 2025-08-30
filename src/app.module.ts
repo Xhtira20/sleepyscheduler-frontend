@@ -11,7 +11,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       imports: [ConfigModule],
        inject: [ConfigService],
       
-      useFactory: (configService: ConfigService) => ({
+       useFactory: (configService: ConfigService) => ({
+        /* postgress database configuration*/
         type: 'postgres',
         host: configService.get<string>('DATABASE_HOST'),
         port: +configService.get('DATABASE_PORT'),
