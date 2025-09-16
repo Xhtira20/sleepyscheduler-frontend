@@ -25,7 +25,7 @@ import { UsersModule } from './users/users.module';
         logging: true,
       }),
      }),
-      UsersModule,
+      UsersModule,// import user module for table creation
   ],
   controllers: [AppController],
   providers: [AppService],
